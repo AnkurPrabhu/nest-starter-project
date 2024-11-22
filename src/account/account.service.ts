@@ -4,8 +4,9 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { Account } from '../database/models/models';
+
 import { ValidationError } from 'sequelize';
+import {Account} from "./account.model";
 @Injectable()
 export class AccountService {
   constructor(

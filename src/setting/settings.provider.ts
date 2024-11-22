@@ -1,4 +1,5 @@
-import { Setting } from './models';
+import {Setting} from "./setting.model";
+
 
 export const settingsProviders = [
   {

@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import { settingsProviders } from '../database/models/settings.provider';
+import { settingsProviders } from './settings.provider';
 import { SettingController } from './setting.controller';
 import { SettingService } from './setting.service';
 

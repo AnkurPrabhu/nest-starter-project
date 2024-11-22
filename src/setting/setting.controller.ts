@@ -8,18 +8,18 @@ import {
 } from './create-setting.dto';
 import { BasicAuthGuard } from '../auth.guard';
 
-@Controller()
+@Controller('/setting')
 @UseGuards(BasicAuthGuard)
 export class SettingController {
   constructor(private readonly appService: SettingService) {}
 
-  @Post('/setting/create')
+  @Post()
   async createSetting(@Body() settingDto: CreateSettingDto): Promise<string> {
     await this.appService.createSetting(settingDto);
     return 'success';
   }
 
-  @Put('setting/update')
+  @Put()
   async updateSetting(
     @Body() UpdateSettingDto: UpdateSettingDto,
   ): Promise<string> {
@@ -27,7 +27,7 @@ export class SettingController {
     return 'success';
   }
 
-  @Delete('setting/delete')
+  @Delete()
   async deleteSetting(@Body() setting: DeleteSettingDto): Promise<string> {
     await this.appService.deleteSetting(setting);
     return 'success';

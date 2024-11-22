@@ -2,7 +2,7 @@ export class CreateSettingDto {
   name: string;
   value: string;
   dataType: string;
-  AccountId: number;
+  accountId: number;
 }
 export class UpdateSettingDto extends CreateSettingDto {
   settingId: number;

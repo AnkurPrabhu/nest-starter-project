@@ -4,7 +4,7 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { Setting } from '../database/models/models';
+
 import {
   CreateSettingDto,
   DeleteSettingDto,
@@ -12,6 +12,7 @@ import {
 } from './create-setting.dto';
 
 import { ValidationError } from 'sequelize';
+import {Setting} from "./setting.model";
 
 @Injectable()
 export class SettingService {
@@ -52,7 +53,7 @@ export class SettingService {
         name: setting.name,
         value: setting.value,
         data_type: setting.dataType,
-        account_id: setting.AccountId,
+        account_id: setting.accountId,
       });
     } catch (error) {
       if (error instanceof ValidationError) {

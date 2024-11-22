@@ -3,9 +3,11 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { Account, Setting } from './database/models/models';
+
 import { AccountModule } from './account/account.module';
 import { SettingModule } from './setting/setting.module';
+import {Account} from "./account/account.model";
+import {Setting} from "./setting/setting.model";
 
 @Module({
   imports: [

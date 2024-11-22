@@ -1,4 +1,5 @@
-import { Account } from './models';
+import {Account} from "./account.model";
+
 
 export const accountsProviders = [
   {
